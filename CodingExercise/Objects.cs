@@ -39,12 +39,18 @@ namespace CodingExercise
 
         public List<Card> Sort(List<Card> cards)
         {
+            ValidateDeckOfCards(cards);
+
             cards.Sort((c1, c2) => c1.Point.CompareTo(c2.Point));
             return cards;
         }
 
         public List<Card> Shuffle(List<Card> cards,int nSwap = 20)
         {
+            ValidateDeckOfCards(cards);
+
+            if (nSwap < 1)
+                throw new Exception("Number of swap should be equal or greater than 1");
 
             Random rnd = new Random();
             
@@ -66,6 +72,14 @@ namespace CodingExercise
 
             return cards;
 
+        }
+
+        public void ValidateDeckOfCards(List<Card> cards)
+        {
+            if (cards == null)
+                throw new ArgumentNullException("Deck of cards is null");
+            if (cards.Count != 52)
+                throw new Exception("Number of cards in deck should equal 52");
         }
     }
 

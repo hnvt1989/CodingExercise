@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingExercise", "CodingExercise\CodingExercise.csproj", "{F9876D84-78AA-4A37-A3C8-BBB657BC610E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{80D2E104-46D6-41D5-8B29-676F47FB93B9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F9876D84-78AA-4A37-A3C8-BBB657BC610E} = {F9876D84-78AA-4A37-A3C8-BBB657BC610E}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
